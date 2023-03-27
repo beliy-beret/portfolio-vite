@@ -1,0 +1,7 @@
+.projects {
+    margin-top: 2px;
+    background-color: var(--gray);
+}
+.carousel{
+    padding: 1rem 5% 2rem;    
+}

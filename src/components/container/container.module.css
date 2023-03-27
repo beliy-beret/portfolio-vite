@@ -1,0 +1,10 @@
+.box{    
+    margin: 0 auto;
+    max-width: 1900px;    
+}
+
+@media screen and (min-width: 1200px) {
+    .box {
+        padding: 0;
+    }
+}
