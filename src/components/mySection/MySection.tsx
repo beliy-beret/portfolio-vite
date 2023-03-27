@@ -12,7 +12,7 @@ type ComponentPropsType = DefaultDivPropsType & {
 
 export const Section: FC<ComponentPropsType> = ({ children, sectionName, ...restProps }) => {
   const ref = useRef<HTMLDivElement | null>(null)
-  const entry = useIntersectionObserver(ref, { threshold: 0.9 })
+  const entry = useIntersectionObserver(ref, { threshold: 0.85 })
   const isVisible = !!entry?.isIntersecting
   const { setActiveSectionName } = useAppContext()
   const changeIntersectingSection = () => isVisible && setActiveSectionName(sectionName)
