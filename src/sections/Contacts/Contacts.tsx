@@ -54,9 +54,6 @@ export const Contacts: FC = () => {
       .catch(() => error())
       .finally(() => setTimeout(() => loadingHandler(false), 500))
   }
-  console.log(
-    `isDirty: ${isDirty}\n isValid: ${isValid} \n name error: ${errors.userName?.message}\n contact error: ${errors.userContact?.message}\n message `,
-  )
 
   return (
     <Section sectionName='contacts' className={classes.contacts} id={'contacts'}>
