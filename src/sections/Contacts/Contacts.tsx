@@ -34,7 +34,7 @@ export const Contacts: FC = () => {
     control,
     handleSubmit,
     reset,
-    formState: { errors, isDirty, isValid },
+    formState: { errors },
   } = useForm<Inputs>({ mode: 'onBlur' })
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
@@ -96,12 +96,7 @@ export const Contacts: FC = () => {
           )}
         />
 
-        <Button
-          type='primary'
-          htmlType='submit'
-          loading={isLoading}
-          disabled={!isDirty || !isValid}
-        >
+        <Button type='primary' htmlType='submit' loading={isLoading}>
           Send message
         </Button>
       </form>
