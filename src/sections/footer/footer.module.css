@@ -1,16 +1,8 @@
 .title {
     text-align: center;
     font-size: 1.1rem;
-}
-.contacts {
-    margin-top: 0.5rem;
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem
-}
-.contacts img {
-    width: 30px;
-    height: 30px;
+    color: var(--white);
+    margin: 0.5rem;
 }
 
 @media screen and (min-width: 576px) {
