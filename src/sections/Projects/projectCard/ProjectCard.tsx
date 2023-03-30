@@ -1,3 +1,5 @@
+import { Divider, Space } from 'antd'
+
 import { FC } from 'react'
 import { ProjectType } from '../projectList'
 import classes from './projectCard.module.css'
@@ -21,12 +23,14 @@ export const ProjectCard: FC<ComponentPropsType> = ({
         <p>{description}</p>
       </div>
       <div className={classes.cardActions}>
-        <a href={url} target='_blank' rel='noreferrer'>
-          Go to project
-        </a>
-        <a href={demo} target='_blank' rel='noreferrer'>
-          Demo
-        </a>
+        <Space size={50} split={<Divider type='vertical' style={{ borderColor: 'black' }} />}>
+          <a href={url} target='_blank' rel='noreferrer'>
+            Code
+          </a>
+          <a href={demo} target='_blank' rel='noreferrer'>
+            Demo
+          </a>
+        </Space>
       </div>
     </div>
   )
