@@ -1,4 +1,4 @@
-import { Button, Input, Typography, message } from 'antd'
+import { Button, Divider, Input, Space, Typography, message } from 'antd'
 import { Controller, SubmitHandler, useForm } from 'react-hook-form'
 import { FC, useState } from 'react'
 
@@ -6,6 +6,7 @@ import { Section } from '../../components/mySection/MySection'
 import { Title } from '../../components/title/Title'
 import axios from 'axios'
 import classes from './contacts.module.css'
+import { contactsIcons } from '../../assets/images/contacts/contactsIcons'
 
 type Inputs = {
   userName: string
@@ -102,6 +103,19 @@ export const Contacts: FC = () => {
           Send message
         </Button>
       </form>
+      <div className={classes.contactList}>
+        <Space align='center' size={'large'}>
+          <a href='mailto:skoriy12990@gmail.com'>
+            <img src={contactsIcons.mail} alt={'Email'} title={'Email'} />
+          </a>
+          <a href='https://t.me/StanislavSkor' target={'_blank'} rel='noreferrer'>
+            <img src={contactsIcons.telegram} alt={'Telegram'} title={'Telegram'} />
+          </a>
+          <a href='https://wa.me/79648911197' target={'_blank'} rel='noreferrer'>
+            <img src={contactsIcons.whatsapp} alt={'Whatsapp'} title={'Whatsapp'} />
+          </a>
+        </Space>
+      </div>
     </Section>
   )
 }

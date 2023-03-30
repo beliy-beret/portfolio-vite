@@ -20,6 +20,15 @@
 .form textarea {
     resize: none;
 }
+.contactList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contactList img {
+    width: 35px;
+    height: 35px;
+}
 
 @media screen and (min-width: 576px) {
     .contacts {
