@@ -42,7 +42,7 @@ export const Projects: FC = () => {
   }
   return (
     <Section sectionName='projects' id={'projects'} className={classes.projects}>
-      <Title>My projects</Title>
+      <Title>My projects:</Title>
       <div className={classes.carousel}>
         <Slider {...settings} className={classes.carousel}>
           {projects}

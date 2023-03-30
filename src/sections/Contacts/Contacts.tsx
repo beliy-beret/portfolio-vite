@@ -3,6 +3,7 @@ import { Controller, SubmitHandler, useForm } from 'react-hook-form'
 import { FC, useState } from 'react'
 
 import { Section } from '../../components/mySection/MySection'
+import { Title } from '../../components/title/Title'
 import axios from 'axios'
 import classes from './contacts.module.css'
 
@@ -58,7 +59,8 @@ export const Contacts: FC = () => {
   return (
     <Section sectionName='contacts' className={classes.contacts} id={'contacts'}>
       {contextHolder}
-      <h2 className={classes.title}>Send message</h2>
+      <Title>Contacts:</Title>
+      {/* <h3 className={classes.formTitle}>Send message</h3> */}
       <form onSubmit={handleSubmit(onSubmit)} className={classes.form}>
         <Controller
           name={'userName'}

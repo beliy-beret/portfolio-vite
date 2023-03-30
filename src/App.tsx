@@ -1,6 +1,7 @@
 import { createContext, useContext, useState } from 'react'
 
 import { About } from './sections/about/About'
+import { ConfigProvider } from 'antd'
 import { Contacts } from './sections/Contacts/Contacts'
 import { Container } from './components/container/Container'
 import { Footer } from './sections/footer/Footer'
@@ -20,18 +21,26 @@ export const App = () => {
   const [activeSectionName, setActiveSectionName] = useState<SectionNamesType>('about')
   return (
     <AppContext.Provider value={{ activeSectionName, setActiveSectionName }}>
-      <div className={'app'}>
-        <Header />
-        <main>
-          <Container>
-            <About />
-            <MySkills />
-            <Projects />
-            <Contacts />
-          </Container>
-        </main>
-        <Footer />
-      </div>
+      <ConfigProvider
+        theme={{
+          token: {
+            colorPrimary: '#28a745',
+          },
+        }}
+      >
+        <div className={'app'}>
+          <Header />
+          <main>
+            <Container>
+              <About />
+              <MySkills />
+              <Projects />
+              <Contacts />
+            </Container>
+          </main>
+          <Footer />
+        </div>
+      </ConfigProvider>
     </AppContext.Provider>
   )
 }
