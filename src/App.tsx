@@ -18,7 +18,9 @@ export const AppContext = createContext<ContextType>({} as ContextType)
 export const useAppContext = () => useContext<ContextType>(AppContext)
 
 export const App = () => {
-  const [activeSectionName, setActiveSectionName] = useState<SectionNamesType>('about')
+  const [activeSectionName, setActiveSectionName] = useState<SectionNamesType>(
+    '' as SectionNamesType,
+  )
   return (
     <AppContext.Provider value={{ activeSectionName, setActiveSectionName }}>
       <ConfigProvider

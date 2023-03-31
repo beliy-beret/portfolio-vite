@@ -18,10 +18,11 @@ export const Projects: FC = () => {
     />
   ))
   const settings = {
+    swipeToSlide: true,
     arrows: true,
     dots: true,
     infinite: true,
-    speed: 700,
+    speed: 400,
     slidesToShow: 3,
     initialSlide: 0,
     responsive: [

@@ -1,6 +1,7 @@
 .contacts {
-    background-color: rgb(105, 104, 104);
     padding: 1rem;
+    margin-top: 2px;
+    background-color: var(--gray);
 }
 .form {        
     max-width: 350px;
