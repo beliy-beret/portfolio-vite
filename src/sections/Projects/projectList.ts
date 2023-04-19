@@ -73,7 +73,7 @@ export const projectList: Array<ProjectType> = [
     screenShot: projectsImg.counter,
     title: 'Counter',
     url: 'https://github.com/beliy-beret/React-Counter',
-    demo: 'https://react-counter-bj3cb2umw-beliy-beret.vercel.app/',
+    demo: 'https://react-counter-eta.vercel.app/',
     description:
       'App created Create-React-App with TypeScript template. Application state is managed by Redux Toolkit. Storybook for project docs. Jest for tests.',
   },
