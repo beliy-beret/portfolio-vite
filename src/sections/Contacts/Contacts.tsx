@@ -1,4 +1,4 @@
-import { Button, Divider, Input, Space, Typography, message } from 'antd'
+import { Button, Col, Input, Row, Space, Typography, message } from 'antd'
 import { Controller, SubmitHandler, useForm } from 'react-hook-form'
 import { FC, useState } from 'react'
 
@@ -36,7 +36,7 @@ export const Contacts: FC = () => {
     control,
     handleSubmit,
     reset,
-    formState: { errors },
+    formState: { errors, isValid, isDirty },
   } = useForm<Inputs>({ mode: 'onBlur' })
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
@@ -61,61 +61,77 @@ export const Contacts: FC = () => {
     <Section sectionName='contacts' className={classes.contacts} id={'contacts'}>
       {contextHolder}
       <Title>Contacts:</Title>
-      {/* <h3 className={classes.formTitle}>Send message</h3> */}
-      <form onSubmit={handleSubmit(onSubmit)} className={classes.form}>
-        <Controller
-          name={'userName'}
-          control={control}
-          rules={{ required: { value: true, message: 'Enter your name.' } }}
-          render={({ field }) => (
-            <Input placeholder={'Your name'} status={errors.userName ? 'error' : ''} {...field} />
-          )}
-        />
-        {errors.userName && (
-          <Typography.Text type={'danger'}>{errors.userName.message}</Typography.Text>
-        )}
-        <Controller
-          name={'userContact'}
-          control={control}
-          rules={{ required: { value: true, message: 'Enter your contact.' } }}
-          render={({ field }) => (
-            <Input
-              type={'text'}
-              placeholder={'Email address / Telegram / WhatsApp'}
-              status={errors.userContact ? 'error' : ''}
-              {...field}
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <Row justify={'center'} gutter={[16, 16]}>
+          <Col span={24}>
+            <Controller
+              name={'userName'}
+              control={control}
+              rules={{ required: { value: true, message: 'Enter your name.' } }}
+              render={({ field }) => (
+                <Input
+                  placeholder={'Your name'}
+                  status={errors.userName ? 'error' : ''}
+                  {...field}
+                />
+              )}
             />
-          )}
-        />
-        {errors.userContact && (
-          <Typography.Text type={'danger'}>{errors.userContact.message}</Typography.Text>
-        )}
-
-        <Controller
-          name={'userMessage'}
-          control={control}
-          render={({ field }) => (
-            <Input.TextArea placeholder={'Your message'} rows={5} {...field}></Input.TextArea>
-          )}
-        />
-
-        <Button type='primary' htmlType='submit' loading={isLoading}>
-          Send message
-        </Button>
+            {errors.userName && (
+              <Typography.Text type={'danger'}>{errors.userName.message}</Typography.Text>
+            )}
+          </Col>
+          <Col span={24}>
+            <Controller
+              name={'userContact'}
+              control={control}
+              rules={{ required: { value: true, message: 'Enter your contact.' } }}
+              render={({ field }) => (
+                <Input
+                  type={'text'}
+                  placeholder={'Email address / Telegram / WhatsApp'}
+                  status={errors.userContact ? 'error' : ''}
+                  {...field}
+                />
+              )}
+            />
+            {errors.userContact && (
+              <Typography.Text type={'danger'}>{errors.userContact.message}</Typography.Text>
+            )}
+          </Col>
+          <Col span={24}>
+            <Controller
+              name={'userMessage'}
+              control={control}
+              render={({ field }) => (
+                <Input.TextArea placeholder={'Your message'} rows={5} {...field}></Input.TextArea>
+              )}
+            />
+          </Col>
+          <Button
+            type='primary'
+            htmlType='submit'
+            loading={isLoading}
+            disabled={!isDirty || !isValid}
+          >
+            Send message
+          </Button>
+        </Row>
       </form>
-      <div className={classes.contactList}>
-        <Space align='center' size={'large'}>
-          <a href='mailto:skoriy12990@gmail.com'>
-            <img src={contactsIcons.mail} alt={'Email'} title={'Email'} />
-          </a>
-          <a href='https://t.me/StanislavSkor' target={'_blank'} rel='noreferrer'>
-            <img src={contactsIcons.telegram} alt={'Telegram'} title={'Telegram'} />
-          </a>
-          <a href='https://wa.me/79648911197' target={'_blank'} rel='noreferrer'>
-            <img src={contactsIcons.whatsapp} alt={'Whatsapp'} title={'Whatsapp'} />
-          </a>
-        </Space>
-      </div>
+      <Row justify={'center'} className={classes.contactList}>
+        <Col>
+          <Space align='center' size={'large'}>
+            <a href='mailto:skoriy12990@gmail.com'>
+              <img src={contactsIcons.mail} alt={'Email'} title={'Email'} />
+            </a>
+            <a href='https://t.me/StanislavSkor' target={'_blank'} rel='noreferrer'>
+              <img src={contactsIcons.telegram} alt={'Telegram'} title={'Telegram'} />
+            </a>
+            <a href='https://wa.me/79648911197' target={'_blank'} rel='noreferrer'>
+              <img src={contactsIcons.whatsapp} alt={'Whatsapp'} title={'Whatsapp'} />
+            </a>
+          </Space>
+        </Col>
+      </Row>
     </Section>
   )
 }

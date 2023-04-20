@@ -20,6 +20,6 @@
     "react/react-in-jsx-scope": "off",
     "no-case-declarations": "off",
     "prettier/prettier": ["error", { "endOfLine": "crlf" }],
-    "no-console": "error"
+    "no-console": "off"
   }
 }

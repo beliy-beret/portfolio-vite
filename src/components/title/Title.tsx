@@ -1,5 +1,6 @@
 import { FC, ReactNode } from 'react'
 
+import { Typography } from 'antd'
 import classes from './title.module.css'
 
 type ComponentPropsType = {
@@ -8,5 +9,9 @@ type ComponentPropsType = {
 }
 
 export const Title: FC<ComponentPropsType> = ({ className = '', children }) => {
-  return <h2 className={classes.title + ' ' + className}>{children}</h2>
+  return (
+    <Typography.Title level={2} className={classes.title + ' ' + className}>
+      {children}
+    </Typography.Title>
+  )
 }

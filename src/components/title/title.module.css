@@ -6,12 +6,6 @@
     text-decoration: underline var(--green) 3px;
 }
 
-@media screen and (min-width: 450px) {
-    .imgList {
-        grid-template-columns: repeat(4, 1fr);
-    }      
-}
-
 @media screen and (min-width: 576px) {
     .title {
         font-size: 2.5rem;
