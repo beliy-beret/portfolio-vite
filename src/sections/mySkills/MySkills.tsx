@@ -1,6 +1,6 @@
-import { Fade } from 'react-awesome-reveal'
 import { Section } from '../../components/mySection/MySection'
 import { Title } from '../../components/title/Title'
+import { Zoom } from 'react-awesome-reveal'
 import classes from './mySkills.module.css'
 import { skillsImages } from '../../assets/images/skills/images'
 
@@ -8,7 +8,7 @@ export const MySkills = () => {
   return (
     <Section sectionName='skills' id='skills' className={classes.skills}>
       <Title>Work with:</Title>
-      <Fade delay={400}>
+      <Zoom delay={500} triggerOnce>
         <div className={classes.imgList}>
           <img src={skillsImages.htmlIcon} alt={'HTML'} />
           <img src={skillsImages.cssIcon} alt={'CSS / SCSS'} />
@@ -21,7 +21,7 @@ export const MySkills = () => {
           <img src={skillsImages.webpackIcon} alt={'Webpack'} />
           <img src={skillsImages.dockerIcon} alt={'docker'} />
         </div>
-      </Fade>
+      </Zoom>
     </Section>
   )
 }

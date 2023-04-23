@@ -2,6 +2,7 @@ import { Button, Col, Input, Row, Space, Typography, message } from 'antd'
 import { Controller, SubmitHandler, useForm } from 'react-hook-form'
 import { FC, useState } from 'react'
 
+import { AttentionSeeker } from 'react-awesome-reveal'
 import { Section } from '../../components/mySection/MySection'
 import { Title } from '../../components/title/Title'
 import axios from 'axios'
@@ -119,17 +120,19 @@ export const Contacts: FC = () => {
       </form>
       <Row justify={'center'} className={classes.contactList}>
         <Col>
-          <Space align='center' size={'large'}>
-            <a href='mailto:skoriy12990@gmail.com'>
-              <img src={contactsIcons.mail} alt={'Email'} title={'Email'} />
-            </a>
-            <a href='https://t.me/StanislavSkor' target={'_blank'} rel='noreferrer'>
-              <img src={contactsIcons.telegram} alt={'Telegram'} title={'Telegram'} />
-            </a>
-            <a href='https://wa.me/79648911197' target={'_blank'} rel='noreferrer'>
-              <img src={contactsIcons.whatsapp} alt={'Whatsapp'} title={'Whatsapp'} />
-            </a>
-          </Space>
+          <AttentionSeeker effect='headShake' delay={300} triggerOnce>
+            <Space align='center' size={'large'}>
+              <a href='mailto:skoriy12990@gmail.com'>
+                <img src={contactsIcons.mail} alt={'Email'} title={'Email'} />
+              </a>
+              <a href='https://t.me/StanislavSkor' target={'_blank'} rel='noreferrer'>
+                <img src={contactsIcons.telegram} alt={'Telegram'} title={'Telegram'} />
+              </a>
+              <a href='https://wa.me/79648911197' target={'_blank'} rel='noreferrer'>
+                <img src={contactsIcons.whatsapp} alt={'Whatsapp'} title={'Whatsapp'} />
+              </a>
+            </Space>
+          </AttentionSeeker>
         </Col>
       </Row>
     </Section>

@@ -46,7 +46,7 @@ export const Projects: FC = () => {
     <Section sectionName='projects' id={'projects'} className={classes.projects}>
       <Title>My projects:</Title>
       <div className={classes.carousel}>
-        <Fade delay={300}>
+        <Fade delay={300} triggerOnce>
           <Slider {...settings} className={classes.carousel}>
             {projects}
           </Slider>

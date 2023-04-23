@@ -20,6 +20,14 @@
     height: 35px;
 }
 
+.contactList img:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
 @media screen and (min-width: 576px) {
     .contacts {
         padding: 3% 0 8%;

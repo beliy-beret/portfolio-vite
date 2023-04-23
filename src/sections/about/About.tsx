@@ -12,7 +12,7 @@ export const About: FC = () => {
       <Row align={'middle'} justify={'center'}>
         <Col span={10}>
           <p className={classes.description}>
-            <Fade duration={300} direction={'left'} cascade>
+            <Fade duration={300} direction={'left'} cascade triggerOnce>
               <span>Hello!</span>
               <span>My name is</span>
               <span className={classes.name}>
