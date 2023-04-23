@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import { Fade } from 'react-awesome-reveal'
 import { ProjectCard } from './projectCard/ProjectCard'
 import { Section } from '../../components/mySection/MySection'
 import Slider from 'react-slick'
@@ -45,9 +46,11 @@ export const Projects: FC = () => {
     <Section sectionName='projects' id={'projects'} className={classes.projects}>
       <Title>My projects:</Title>
       <div className={classes.carousel}>
-        <Slider {...settings} className={classes.carousel}>
-          {projects}
-        </Slider>
+        <Fade delay={300}>
+          <Slider {...settings} className={classes.carousel}>
+            {projects}
+          </Slider>
+        </Fade>
       </div>
     </Section>
   )

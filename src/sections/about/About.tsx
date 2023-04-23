@@ -15,8 +15,13 @@ export const About: FC = () => {
             <Fade duration={300} direction={'left'} cascade>
               <span>Hello!</span>
               <span>My name is</span>
-              <span className={classes.name}>Stanislav</span>.
-              <span>I{"'"}m Front-end developer.</span>
+              <span className={classes.name}>
+                {' '}
+                <Fade duration={250} cascade>
+                  Stanislav
+                </Fade>{' '}
+              </span>
+              .<span>I{"'"}m Front-end developer.</span>
             </Fade>
           </p>
         </Col>
