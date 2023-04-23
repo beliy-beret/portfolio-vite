@@ -1,6 +1,7 @@
 import { Avatar, Col, Row } from 'antd'
 
 import { FC } from 'react'
+import { Fade } from 'react-awesome-reveal'
 import { Section } from '../../components/mySection/MySection'
 import ava from '../../assets/images/ava.jpeg'
 import classes from './about.module.css'
@@ -11,9 +12,12 @@ export const About: FC = () => {
       <Row align={'middle'} justify={'center'}>
         <Col span={10}>
           <p className={classes.description}>
-            Hello!
-            <br /> My name is <span className={classes.name}>Stanislav</span>.
-            <br /> I{"'"}m Front-end developer.
+            <Fade duration={300} direction={'left'} cascade>
+              <span>Hello!</span>
+              <span>My name is</span>
+              <span className={classes.name}>Stanislav</span>.
+              <span>I{"'"}m Front-end developer.</span>
+            </Fade>
           </p>
         </Col>
         <Col span={12}>
