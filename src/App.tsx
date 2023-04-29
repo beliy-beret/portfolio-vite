@@ -2,12 +2,12 @@ import { createContext, useContext, useState } from 'react'
 
 import { About } from './sections/about/About'
 import { ConfigProvider } from 'antd'
-import { Contacts } from './sections/contacts/Contacts'
+import { Contacts } from 'sections/contacts/Contacts'
 import { Container } from './components/container/Container'
 import { Footer } from './sections/footer/Footer'
 import { Header } from './sections/header/Header'
 import { MySkills } from './sections/mySkills/MySkills'
-import { Projects } from './sections/projects/Projects'
+import { Projects } from 'sections/projects/Projects'
 
 export type SectionNamesType = 'about' | 'skills' | 'projects' | 'contacts'
 type ContextType = {
