@@ -11,6 +11,7 @@ type ComponentPropsType = DefaultDivPropsType & {
 }
 
 export const Section: FC<ComponentPropsType> = ({ children, sectionName, ...restProps }) => {
+  // Intersection Observer
   const ref = useRef<HTMLDivElement | null>(null)
   const entry = useIntersectionObserver(ref, { threshold: 0.95 })
   const isVisible = !!entry?.isIntersecting
