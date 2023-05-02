@@ -31,3 +31,10 @@ footer {
   padding: 0.5rem;
   background-color: var(--dark-gray);
 }
+.spiner {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
