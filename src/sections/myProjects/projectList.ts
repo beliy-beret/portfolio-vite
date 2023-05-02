@@ -9,6 +9,15 @@ export type ProjectType = Record<
 export const projectList: Array<ProjectType> = [
   {
     id: v1(),
+    screenShot: projectsImg.crm,
+    title: 'Mini CRM',
+    url: 'https://github.com/beliy-beret/task-manager',
+    demo: 'https://task-manager-eight-wine.vercel.app/',
+    description:
+      'You can create department and add tasks, change task Data, change task status with drag and drop. App created Create-React-App with TypeScript and Redux Toolkit templates. Axios is used to work with API. Design made by Material UI library.',
+  },
+  {
+    id: v1(),
     screenShot: projectsImg.samuraiNetwork,
     title: 'Social Network',
     url: 'https://github.com/beliy-beret/incubator-social-network',

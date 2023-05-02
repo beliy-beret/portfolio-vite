@@ -1,6 +1,7 @@
 import JsonPlaceholder from './JsonPlaceholder.png'
 import computer from './Computer.png'
 import counter from './counter.png'
+import crm from './CRM.jpg'
 import news from './news.png'
 import petShop from './PetShop.png'
 import samuraiNetwork from './samuraiNetwork.jpg'
@@ -18,4 +19,5 @@ export const projectsImg = {
   weather,
   counter,
   samuraiNetwork,
+  crm,
 }
