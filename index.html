@@ -15,10 +15,13 @@
       rel="stylesheet"
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-    />
-
+    />    
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
     <!-- Yandex.Metrika counter -->
-    <script defer type="text/javascript">
+    <script type="text/javascript">
       (function (m, e, t, r, i, k, a) {
         m[i] =
           m[i] ||
@@ -39,6 +42,7 @@
       })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym')
 
       ym(93538423, 'init', {
+        defer: true,
         clickmap: true,
         trackLinks: true,
         accurateTrackBounce: true,
@@ -54,10 +58,6 @@
     ></noscript>
     <!-- /Yandex.Metrika counter -->
 
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
 
