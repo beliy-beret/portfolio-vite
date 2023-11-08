@@ -34,6 +34,8 @@ export const App = () => {
       </div>
     )
   }
+
+  console.log(import.meta.env)
   return (
     <AppContext.Provider value={{ activeSectionName, setActiveSectionName }}>
       <ConfigProvider

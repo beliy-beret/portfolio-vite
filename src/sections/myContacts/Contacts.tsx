@@ -43,13 +43,10 @@ export const Contacts: FC = () => {
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     loadingHandler(true)
     axios
-      .post(
-        'https://api.telegram.org/bot5704162466:AAFm67a2b3h9XCkZsufqVzi4t_Ib91gu2Gs/sendMessage',
-        {
-          chat_id: 1322204084,
-          text: `Name:  ${data.userName}\n Contact:  ${data.userContact}\n Message: '${data.userMessage}'`,
-        },
-      )
+      .post(`https://api.telegram.org/${import.meta.env.VITE_BOT_TOKEN}/sendMessage`, {
+        chat_id: 1322204084,
+        text: `Name:  ${data.userName}\n Contact:  ${data.userContact}\n Message: '${data.userMessage}'`,
+      })
       .then(() => {
         reset()
         success()
