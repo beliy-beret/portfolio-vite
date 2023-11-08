@@ -21,7 +21,7 @@ export const projectList: Array<ProjectType> = [
     screenShot: projectsImg.samuraiNetwork,
     title: 'Social Network',
     url: 'https://github.com/beliy-beret/incubator-social-network',
-    demo: 'https://incubator-social-network-iota.vercel.app/',
+    demo: 'https://samurai-social-network.vercel.app/',
     description:
       'You can fetch all users, add some users to friend list, send messages, change profile data, upload photo. App created Create-React-App with TypeScript and Redux templates. Axios is used to work with API. Design made by Ant Design library.',
   },
